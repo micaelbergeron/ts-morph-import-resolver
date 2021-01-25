@@ -2,12 +2,16 @@ import { Project, ImportDeclaration, SourceFile } from 'ts-morph'
 import * as ts from 'typescript'
 const path = require('path')
 
-//const INPUT = process.argv[2];
+
+const FLAGS = {
+  save: process.argv.includes("--save"),
+}
+
 const rootDir = process.cwd();
 
 // this should come from "tsconfig"
 const compilerOptions = {
-  baseDir: ".",
+  baseDir: "./src/",
   paths: {
     "~/*": "*"
   }
@@ -43,6 +47,8 @@ export function main() {
   project.getSourceFiles().map((sourceFile) => {
     apply(sourceFile)
     console.log(sourceFile.getText())
+
+    FLAGS.save && sourceFile.save()
   })
 
   //sourceFile.save()
@@ -63,7 +69,7 @@ function apply(sourceFile: SourceFile) {
 
     const computedPaths = {
       rootRelative: path.relative(
-        rootDir,
+        path.resolve(rootDir, compilerOptions.baseDir),
         sourceFile.getFilePath(),
       ),
       sourceFilePath: sourceFile.getFilePath(),
