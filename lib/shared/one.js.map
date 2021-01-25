@@ -1,0 +1,1 @@
+{"version":3,"file":"one.js","sourceRoot":"","sources":["one.ts"],"names":[],"mappings":";;AAAA,SAAwB,GAAG;IACzB,OAAO,CAAC,CAAC;AACX,CAAC;AAFD,sBAEC","sourcesContent":["export default function one() {\n  return 1;\n}"]}

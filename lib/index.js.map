@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["index.ts"],"names":[],"mappings":";;AAAA;IACE,OAAO,SAAS,CAAC;AACnB,CAAC;AAFD,4BAEC","sourcesContent":["export default function() {\n  return __dirname;\n}\n"]}
