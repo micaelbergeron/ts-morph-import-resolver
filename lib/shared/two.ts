@@ -1,3 +1,3 @@
-import * as one from '../shared/one'
+import * as one from './one'
 
 export default 2;

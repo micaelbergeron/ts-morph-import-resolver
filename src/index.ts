@@ -1,1 +1,1 @@
-import * as shared from '../lib/shared/one'
+import * as shared from '~/../../src/~/lib/shared/one.ts'

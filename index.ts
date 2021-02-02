@@ -1,6 +1,6 @@
 import lib from '/lib'
 import one from '~lib/shared/one'
-import one from './../imports/lib/shared/one'
+import one from './lib/shared/one'
 import one from 'lib@shared/one'
 
 
