@@ -9,7 +9,8 @@ const FLAGS = {
 }
 
 // const rootDir = process.cwd();
-const rootDir = path.resolve(process.cwd(), process.argv[2] || "")
+const baseDir = process.argv[process.argv.length-1] || ""
+const rootDir = path.resolve(process.cwd(), baseDir)
 
 // this should come from "tsconfig"
 const compilerOptions = {
@@ -19,7 +20,7 @@ const compilerOptions = {
   }
 }
 
-const ROOT_MODULES = '^(app|common|ui|api|mural|icons|amp|models|helpers|services)'
+const ROOT_MODULES = '^(models|test|workspaces|ui|head|error|common|polyfills|loading|registration|big-idea-canvas|stanford|billing|onboarding|dashboard|helpers|tracking|middleware|android|company|icons|electron|amp|mural|integrations|downloads|invitation|services|users|modals|api|notifications|devices|settings|team|views)'
 
 var count = 0;
 main()
